@@ -1,5 +1,4 @@
 package com.mylang.tokenflow;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
-
+import com.mylang.tokenflow.Scanner.*;
 
 public class tokenflow {
     static boolean hadError = false;
@@ -51,6 +50,8 @@ public class tokenflow {
             System.out.println(token);
         }
         if(hadError) System.exit(65);
+
+
     }
 
     static void error(int line, String message){
@@ -61,5 +62,6 @@ public class tokenflow {
         System.err.println("[line " + line + "] Error" + where + ": " + message);
         hadError = true;
     }
+    
 
 }
