@@ -1,6 +1,6 @@
 package com.mylang.tokenflow;
 
-enum tokentype {
+enum TokenType {
 
     LEFT_PAREN, RIGHT_PAREN, LEFT_BRACE, RIGHT_BRACE,
     COMMA, DOT, MINUS, PLUS, SEMICOLON, SLASH, STAR,
@@ -20,22 +20,22 @@ enum tokentype {
     EOF
 }
 
-class Token{
-    final tokentype type;
+class Token {
+    final TokenType type;
     final String lexeme;
     final Object literal;
     final int line;
 
-    Token(tokentype type, String lexeme, Object literal, int line){
+    Token(TokenType type, String lexeme, Object literal, int line) {
         this.type = type;
         this.lexeme = lexeme;
         this.literal = literal;
         this.line = line;
     }
 
-    public String toString(){
-        return type + " " + lexeme + " " + literal;
-
+    public String toString() {
+        return "\nType of text: " + type + "\n" +
+                "The actual lexeme: " + lexeme + "\n" +
+                "The literal: " + literal;
     }
-
 }
